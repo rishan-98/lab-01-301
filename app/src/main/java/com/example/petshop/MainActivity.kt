@@ -25,6 +25,15 @@ class MainActivity : ComponentActivity() {
         pets.add(dog)
         pets.add(scorpion)
 
+        val moods = mutableListOf<Mood>(
+            HappyMood("2024-01-15"),
+            SadMood("2024-01-16")
+        )
+
+        for (mood in moods) {
+            println(mood.getSummary())
+        }
+
         val pettablePets = mutableListOf<Pettable>()
         pettablePets.add(cat)
         pettablePets.add(dog)
